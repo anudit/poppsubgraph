@@ -1,14 +1,11 @@
-import {
-  PersonhoodPassport,
-  Transfer
-} from "../generated/PersonhoodPassport/PersonhoodPassport"
-import { Passports } from "../generated/schema"
+import { PersonhoodPassport, Transfer} from "../generated/PersonhoodPassport/PersonhoodPassport"
+import { Passport } from "../generated/schema"
 
 export function handleTransfer(event: Transfer): void {
-  let entity = Passports.load(event.transaction.from.toHex());
+  let entity = Passport.load(event.params.to.toHexString());
   if (!entity) {
-    entity = new Passports(event.transaction.from.toHex())
-    let PoPPContract = PersonhoodPassport.bind(event.address)
+    entity = new Passport(event.params.to.toHexString());
+    let PoPPContract = PersonhoodPassport.bind(event.address);
     entity.tokenURI = PoPPContract.tokenURI(event.params.tokenId);
     entity.save()
   }

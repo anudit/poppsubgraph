@@ -7,8 +7,8 @@ dataSources:
     network: mainnet
     source:
       address: "0xb4e903dc14dfe994fe291fc5b385c4718413366d"
-      abi: PersonhoodPassport
       startBlock: 12357901
+      abi: PersonhoodPassport
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
