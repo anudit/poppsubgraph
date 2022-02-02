@@ -1,0 +1,24 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: PersonhoodPassport
+    network: mainnet
+    source:
+      address: "0xb4e903dc14dfe994fe291fc5b385c4718413366d"
+      abi: PersonhoodPassport
+      startBlock: 12357901
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Transfer
+      abis:
+        - name: PersonhoodPassport
+          file: ./abis/PersonhoodPassport.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+      file: ./src/mapping.ts

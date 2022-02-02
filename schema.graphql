@@ -1,0 +1,4 @@
+type Passports @entity {
+  id: ID!
+  tokenURI: String!
+}
