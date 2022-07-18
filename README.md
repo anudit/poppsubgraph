@@ -1,11 +1,12 @@
 # poppsubgraph
 A subgraph for Proof of Personhood Passport
 
-Http Queries Endpoint:
-- https://api.thegraph.com/subgraphs/id/QmewtAtJJsTDAeT8apSXtK3mi4PaHFqMwz1JjqinrVozPg
--  https://api.thegraph.com/subgraphs/name/anudit/popp
+Build completed: QmabK7Bkhc2fhWzjk8L7A7VxST1C2mbwF3fJyqDTp5ZarK
 
-Deployed to https://thegraph.com/explorer/subgraph/anudit/popp
+Deployed to https://thegraph.com/studio/subgraph/popp
+
+Subgraph endpoints:
+Queries (HTTP):     https://api.studio.thegraph.com/query/1649/popp/v1.0
 
 Example,
 ```graphql
